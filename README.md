@@ -63,6 +63,14 @@ Tecnologias de Infraestrutura Utilizadas
 * **Sistema Operacional:** Linux Ubuntu Server LTS
 * **Defesa de Rede:** Regras persistentes de IPTables e Security Lists de nuvem.
 
+Link CraftController/Portal: https://painel.ourcraft.com.br/
+Link API STATUS: https://painel.ourcraft.com.br/api/status
+Link para entrar no servidor: mc.ourcraft.com.br
+
+Para entrar no CraftyController/Painel tem um user teste:
+teste
+teste@123
+
 ---
 
 Como Executar o Ambiente Web Localmente
@@ -80,3 +88,4 @@ docker compose up -d
 ```
 O servidor do Nginx estará disponível em seu navegador em `http://localhost`.
 ```
+
