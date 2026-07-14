@@ -1,0 +1,24 @@
+services:
+  api:
+    image: eclipse-temurin:21-jre-alpine
+    container_name: spring-api
+    volumes:
+      - ./api/mc-status-api.jar:/app/api.jar
+    command: java -jar /app/api.jar
+    ports:
+      - "8080:8080"
+    restart: always
+
+  webserver:
+    image: nginx:alpine
+    container_name: nginx-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/html:/usr/share/nginx/html
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on:
+      - api
+    restart: always
