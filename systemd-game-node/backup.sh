@@ -38,4 +38,7 @@ for dir in "$CRAFTY_SERVERS"/*; do
     fi
 done
 
+echo "Esvaziando a lixeira do Google Drive..."
+rclone cleanup backupworlds:
+
 echo "=== Todos os backups foram processados e sincronizados! ==="
